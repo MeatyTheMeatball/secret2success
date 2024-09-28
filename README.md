@@ -1,2 +1,2 @@
 # secret2success
-Coding Collab with ChatGPT
+Coding Collab with ChatGPT for the AllStarCode Hack-Ai-Thon 2024
