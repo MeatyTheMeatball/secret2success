@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="top">Login Screen</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include jQuery first -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Include Interact.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <!-- Include script.js -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen">
+        <div id="loginBox">
+            <img src="pfp.jpg" alt="User Profile" id="profilePic">
+            <h2>Gerald Williams</h2>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <div class="btns">
+                <button id="loginBtn">Sign In</button>
+                <button id="forgotBtn">Forgot Password</button>
+            </div>
+            <div id="loginError"></div>
+            <br>
+            <br>
+            <img id="load" src="loading.gif" width="60px" height="60px" alt="Loading">
+        </div>
+    </div>
+
+    <!-- Desktop Environment -->
+    <div class="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-content">
+            <div class="icon" id="myComputer">
+                <img src="pc.png" alt="My Computer">
+                <span>My Computer</span>
+            </div>
+            <div class="icon" id="gameIcon">
+                <img src="icon.jpeg" alt="Game Icon">
+                <span>Secret to Success</span>
+            </div>
+            <!-- Add more icons as needed -->
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-button" id="startButton">
+                <img src="https://img.icons8.com/windows/32/ffffff/windows-10.png" alt="Start">
+            </div>
+            <div class="taskbar-icons" id="taskbarIcons">
+                <!-- Active window icons will appear here -->
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="start-menu" id="startMenu">
+            <h3>ASC OS</h3>
+            <ul>
+                <li>Nothing Else</li>
+                <li id="creditsLink"><a href="#" id="showCredits">View Credits</a></li>
+                <li id="logOut">Sign Out</li>
+            </ul>
+        </div>
+
+        <!-- Game Window (Integrated as a Window) -->
+        <div class="window" id="gameWindow">
+            <div class="window-header">
+                <span id="gameTitle">Secret to Success</span>
+                <div class="window-controls">
+                    <button class="minimize" onclick="minimizeWindow('gameWindow')">_</button>
+                    <button class="close" onclick="closeWindow('gameWindow')">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h1>Enter the password to unlock the secret to success</h1>
+                <input type="password" id="passwordInputGame" placeholder="Enter password">
+                <div class="btns">
+                    <button id="submitBtn">Submit</button>
+                    <button id="showBtn">Show Password</button>
+                </div>
+                <div id="hintContainer"></div>
+                <div id="successMessage">
+                    <h1>The secret to success: Failure.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="window" id="pcWindow">
+            <div class="window-header">
+                <span id="pcTitle">My Computer</span>
+                <div class="window-controls">
+                    <button class="minimize" onclick="minimizeWindow('pcWindow')">_</button>
+                    <button class="close" onclick="closeWindow('pcWindow')">X</button>
+                </div>
+            </div>
+            <div class="window-content" id="vro">
+                <h1>𝓱𝓮𝓵𝓵𝓸 𝓿𝓻𝓸 ❤️</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credits Link -->
+
+        <!-- Credits Overlay -->
+        <div id="creditsOverlay">
+            <div id="creditsContent">
+                <h2>Credits</h2>
+                <p>Made For AllStarCode's Hack-AI-Thon 2024</p>
+                <p>Developed by Malachi Young & ChatGPT</p>
+                <p>Artwork by Leonardo.ai & Ideogram.ai</p>
+                <p>Music by SUNO.ai</p>
+                <button id="closeCredits">Close</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="signOut">
+        <img id="outLoad" src="loading.gif" width="180px" height="180px" alt="Loading">
+        <br>
+        <br>
+        <h1>Logging Out</h1>
+    </div>
+</body>
+</html>
